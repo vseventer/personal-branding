@@ -25,8 +25,8 @@
   $grid-gutter-x: $grid-gutter,
   $grid-gutter-y: $grid-gutter,
   $align-self: null,
-  $flex-grow: 0,
-  $flex-shrink: 0,
+  $flex-grow: 1,
+  $flex-shrink: 1,
   $order: null
 ) {
   @if $col == 'auto' {
