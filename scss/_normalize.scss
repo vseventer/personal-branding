@@ -3,6 +3,8 @@
 
 // @see https://csswizardry.com/2012/06/single-direction-margin-declarations/
 html {
+  @include fluid-typography();
+
   background-color: $body-bg;
   color: $text-color;
   font: #{$font-size}/#{$line-height} $font-family;
@@ -10,6 +12,8 @@ html {
 }
 
 body {
+  @include font-smoothing(on);
+
   margin: 0;
 }
 
@@ -52,6 +56,11 @@ pre {
 // @see https://www.gridlover.net/
 a, b, i, strong, em, small, code, sub, sup {
   line-height: 0;
+}
+
+img {
+  box-sizing: border-box;
+  vertical-align: middle;
 }
 
 small, sub, sup {

@@ -7,9 +7,11 @@ $ms-ratio: 4 / 3 !default; // Perfect Fourth.
 // @see https://csswizardry.com/2012/06/single-direction-margin-declarations/
 $font-family: Georgia, serif !default;
 
-$font-size    : 1em !default;
+$font-size    : 1em !default; // 16px.
 $font-size-lg : $font-size * $ms-ratio;
 $font-size-sm : $font-size / $ms-ratio;
+
+$max-font-size : 1.25em !default; // 20px.
 
 $line-height: 1.5 !default;
 
@@ -57,10 +59,16 @@ $border-width-sm : 0.5 * $border-width;
 // Media queries breakpoints.
 // --------------------------
 
+$x-small :  480px !default;
+$small   :  768px !default;
+$medium  :  992px !default;
+$large   : 1200px !default;
+$x-large : 1600px !default;
+
 $breakpoints: (
-  'x-small' : ( min-width:  480px ),
-  'small'   : ( min-width:  768px ),
-  'medium'  : ( min-width:  992px ),
-  'large'   : ( min-width: 1200px ),
-  'x-large' : ( min-width: 1600px )
+  'x-small' : ( min-width: $x-small ),
+  'small'   : ( min-width: $small ),
+  'medium'  : ( min-width: $medium ),
+  'large'   : ( min-width: $large ),
+  'x-large' : ( min-width: $x-large )
 ) !default;

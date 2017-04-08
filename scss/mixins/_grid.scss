@@ -4,10 +4,17 @@
 // Grid container.
 @mixin grid(
   $direction: row,
-  $wrap: wrap
+  $wrap: wrap,
+  $align-content: null,
+  $align-items: null,
+  $justify-content: null
 ) {
   display: flex;
   flex-flow: $direction $wrap;
+
+  align-content: $align-content;
+  align-items: $align-items;
+  justify-content: $justify-content;
 }
 
 // Grid column.
@@ -16,16 +23,23 @@
   $col-offset: 0,
   $grid-gutter: $grid-gutter,
   $grid-gutter-x: $grid-gutter,
-  $grid-gutter-y: $grid-gutter
+  $grid-gutter-y: $grid-gutter,
+  $align-self: null,
+  $flex-grow: 0,
+  $flex-shrink: 0,
+  $order: null
 ) {
   @if $col == 'auto' {
-    flex: 1;
+    flex: $flex-grow $flex-shrink;
   } @else {
-    flex: 0 0 column-width($col, $grid-gutter-x);
+    flex: $flex-grow $flex-shrink column-width($col, $grid-gutter-x);
   }
 
   margin: column-margin($grid-gutter-x, $grid-gutter-y);
   @if $col-offset != 0 {
     margin-left: column-width($col-offset, -0.5 * $grid-gutter-x);
   }
+
+  align-self: $align-self;
+  order: $order;
 }

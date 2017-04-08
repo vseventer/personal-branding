@@ -3,11 +3,10 @@
 
 // @see http://maxdesign.com.au/articles/em/
 
-// Accept 45–75 characters per line.
+// Accept up to 70 characters per line.
 .article {
-  margin: 0 auto $spacer;
-  min-width: 45ch;
-  max-width: 75ch;
+  margin: 0 auto;
+  max-width: 35em;
 }
 
 
@@ -76,6 +75,17 @@
       user-select: none;
       width: $spacer;
     }
+  }
+}
+
+
+// Images.
+// -------
+
+.img {
+  &--responsive {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
