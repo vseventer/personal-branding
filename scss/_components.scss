@@ -1,0 +1,103 @@
+// Article.
+// --------
+
+// @see http://maxdesign.com.au/articles/em/
+
+// Accept 45–75 characters per line.
+.article {
+  margin: 0 auto $spacer;
+  min-width: 45ch;
+  max-width: 75ch;
+}
+
+
+// Blockquotes.
+// ------------
+
+// @see https://www.smashingmagazine.com/2008/06/block-quotes-and-pull-quotes-examples-and-good-practices/
+
+// @see https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+.blockquote {
+  quotes: "“" "”" "‘" "’";
+}
+  .blockquote--line {
+    border-left: $border-width-lg solid;
+    padding-left: $spacer - $border-width-lg;
+  }
+  .blockquote--quote {
+    padding-left: $spacer;
+    position: relative;
+
+    &:before {
+      content: open-quote;
+      font-size: $font-size-lg;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+  .blockquote--line, .blockquote--quote {
+    @include respond-to('small') {
+      margin-left: -$spacer;
+    }
+  }
+
+
+// Code.
+// -----
+
+// @see https://www.sylvaindurand.org/using-css-to-add-line-numbering/
+
+.code {
+  border-left: $border-width solid;
+  counter-reset: line;
+  font-size: $font-size-sm;
+  margin-left: $spacer-lg;
+  padding: $spacer-sm;
+
+  @include respond-to('small') {
+    margin-left: 0;
+  }
+
+  code {
+    padding: 0;
+  }
+
+  span {
+    position: relative;
+
+    &:before {
+      content: counter(line);
+      counter-increment: line;
+      left: -$spacer-lg;
+      padding-top: $spacer-sm;
+      position: absolute;
+      text-align: right;
+      user-select: none;
+      width: $spacer;
+    }
+  }
+}
+
+
+// Lists.
+// ------
+
+.list {
+  @include respond-to('small') {
+    padding-left: 0;
+  }
+}
+  .list-inline {
+    @include grid();
+
+    list-style-type: none;
+    padding-left: 0;
+
+    &__item {
+      @include grid-col($grid-gutter: 0);
+    }
+  }
+  .list--unstyled {
+    list-style-type: none;
+  }

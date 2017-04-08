@@ -1,0 +1,66 @@
+// Typography.
+// -----------
+
+// @see http://www.modularscale.com/
+$ms-ratio: 4 / 3 !default; // Perfect Fourth.
+
+// @see https://csswizardry.com/2012/06/single-direction-margin-declarations/
+$font-family: Georgia, serif !default;
+
+$font-size    : 1em !default;
+$font-size-lg : $font-size * $ms-ratio;
+$font-size-sm : $font-size / $ms-ratio;
+
+$line-height: 1.5 !default;
+
+
+// Branding.
+// ---------
+
+// @see https://ianstormtaylor.com/design-tip-never-use-black
+
+$body-bg    : #ffffff !default;
+$code-bg    : lighten(#000000, 90%) !default;
+$code-color : null !default;
+$text-color : lighten(#000000, 10%) !default;
+$link-color : #1e90ff !default;
+$link-hover-color   :  darken($link-color, 25%) !default;
+$link-visited-color : lighten($link-color, 25%) !default;
+
+
+// Spacing.
+// --------
+
+// @see https://csswizardry.com/2012/06/single-direction-margin-declarations/
+
+$spacer    : 1rem * $line-height !default;
+$spacer-lg : 2   * $spacer;
+$spacer-sm : 0.5 * $spacer;
+
+
+// Grid.
+// -----
+
+$cols        : 12 !default;
+$grid-gutter : $spacer !default;
+$grid-width  : 100% !default;
+
+
+// Components.
+// -----------
+
+$border-width    : 0.0625rem !default;
+$border-width-lg : 2   * $border-width;
+$border-width-sm : 0.5 * $border-width;
+
+
+// Media queries breakpoints.
+// --------------------------
+
+$breakpoints: (
+  'x-small' : ( min-width:  480px ),
+  'small'   : ( min-width:  768px ),
+  'medium'  : ( min-width:  992px ),
+  'large'   : ( min-width: 1200px ),
+  'x-large' : ( min-width: 1600px )
+) !default;
