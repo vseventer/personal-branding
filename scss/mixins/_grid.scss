@@ -10,7 +10,10 @@
   $justify-content: null
 ) {
   display: flex;
+  flex-basis: 100%;
   flex-flow: $direction $wrap;
+  list-style-type: none;
+  width: $grid-width;
 
   align-content: $align-content;
   align-items: $align-items;
@@ -36,6 +39,8 @@
   }
 
   margin: column-margin($grid-gutter-x, $grid-gutter-y);
+  margin-top: 0;
+
   @if $col-offset != 0 {
     margin-left: column-width($col-offset, -0.5 * $grid-gutter-x);
   }

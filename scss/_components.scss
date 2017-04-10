@@ -83,6 +83,9 @@
 // -------
 
 .img {
+  &--circle {
+    border-radius: 50%;
+  }
   &--responsive {
     max-width: 100%;
     width: 100%;
@@ -101,11 +104,10 @@
   .list-inline {
     @include grid();
 
-    list-style-type: none;
     padding-left: 0;
 
     &__item {
-      @include grid-col($grid-gutter: 0);
+      @include grid-col($flex-grow: 0, $flex-shrink: 0);
     }
   }
   .list--unstyled {
