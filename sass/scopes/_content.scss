@@ -1,0 +1,30 @@
+/**
+ * Provide a wrapper for textual content, like an article.
+ *
+ * 1. Only apply styling to immediate children.
+ * 2. Increase spacing after code block due to dropped box shadow.
+ */
+.s-content { /* 1 */
+  /* stylelint-disable selector-max-compound-selectors */
+  * + * {
+    @extend %u-spacer--small;
+  }
+
+  * + h1,
+  * + h2,
+  * + h3,
+  * + h4,
+  * + h5,
+  * + h6 {
+    @extend %u-spacer;
+  }
+
+  .highlight + * { /* 2 */
+    @extend %u-spacer;
+  }
+
+  li + li {
+    @extend %u-spacer--mini;
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+}

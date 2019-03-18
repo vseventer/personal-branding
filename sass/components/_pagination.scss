@@ -1,0 +1,25 @@
+.c-pagination {
+  padding-top: vr(1);
+  padding-bottom: vr(1);
+}
+
+.c-pagination__list {
+  display: grid;
+  grid-template-columns: 1fr [current] 1fr 1fr;
+
+  list-style-type: none;
+}
+
+.c-pagination__current {
+  grid-column: current;
+
+  text-align: center;
+}
+
+.c-pagination__next {
+  text-align: right;
+}
+
+.c-pagination__link {
+  @include link-immutable();
+}

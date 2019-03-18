@@ -1,0 +1,27 @@
+/**
+ * 1. Multiple the calculated font-size with the base.
+ * 2. The next line-height up based on the font-size, that is a multiple of the baseline.
+ */
+@mixin modular-scale($value, $isBlockLevel) {
+  $localFontSize: poly-pow($ratio, $value);
+
+  font-size: $fontSize * $localFontSize; /* 1 */
+
+  @if $isBlockLevel { /* 2 */
+    line-height: $baseline / $localFontSize * ceil($localFontSize / $baseline);
+  }
+}
+
+/**
+ * Expose shortcuts for block-level modular scale.
+ */
+@mixin ms($value) {
+  @include modular-scale($value, true);
+}
+
+/**
+ * Expose shortcuts for inline modular scale.
+ */
+@mixin ms-inline($value) {
+  @include modular-scale($value, false);
+}

@@ -1,0 +1,31 @@
+.c-share {
+  @extend %u-border-top;
+  @extend %u-border-bottom;
+}
+
+.c-share__list {
+  @include list-horizontal();
+}
+
+/**
+ * Properly brand third-party sharing buttons.
+ */
+.share-email {
+  --background: #{$gray};
+}
+
+.share-facebook {
+  --background: #{map-get($brandColor, facebook)};
+}
+
+.share-twitter {
+  --background: #{map-get($brandColor, twitter)};
+}
+
+.share-linkedin {
+  --background: #{map-get($brandColor, linkedIn)};
+}
+
+.share-rss {
+  --background: #{map-get($brandColor, rss)};
+}

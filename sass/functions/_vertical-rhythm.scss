@@ -1,0 +1,17 @@
+/**
+ * 1. Return a multiple of the baseline, in rem units.
+ */
+@function vertical-rhythm($number) {
+  @if unitless($number) {
+    @return 1rem * $number * $baseline; /* 1 */
+  }
+
+  @return $number * $baseline;
+}
+
+/**
+ * Expose shortcuts for vertical rhythm.
+ */
+@function vr($number) {
+  @return vertical-rhythm($number);
+}

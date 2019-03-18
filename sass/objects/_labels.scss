@@ -1,0 +1,52 @@
+/**
+ * 1. Tag background color as CSS variable.
+ * 2. Tag foreground (text) color as CSS variable.
+ * 3. Scale relatively based on font-size.
+ */
+.o-label {
+  --background: #{$lightVariantColor}; /* 1 */
+  --foreground: #{$primaryColor}; /* 2 */
+
+  padding: vr(0.25em); /* 3 */
+
+  background-color: var(--background);
+  border-radius: vr(0.25em); /* 3 */
+
+  &:any-link {
+    color: var(--foreground);
+    text-decoration: inherit;
+  }
+}
+
+/**
+ * Color modifiers.
+ */
+.o-label--primary {
+  --background: #{$primaryColor};
+  --foreground: #{$white};
+}
+
+.o-label--secondary {
+  --background: #{$secondaryColor};
+  --foreground: #{$white};
+}
+
+.o-label--contrast {
+  --background: #{$black};
+  --foreground: #{$white};
+}
+
+/**
+ * Size modifiers.
+ */
+.o-label--small {
+  @include ms-inline(-1);
+}
+
+.o-label--large {
+  @include ms-inline(1);
+}
+
+.o-label--xlarge {
+  @include ms-inline(2);
+}

@@ -1,0 +1,53 @@
+/**
+ * 1. Never use pure black or white.
+ * 2. Primary, base, or brand color.
+ * 3. Sass native lighten and darken blow out colors too fast.
+ * 4. Base colors picked from "The New Defaults".
+ *
+ * Further reading:
+ * - https://css-tricks.com/snippets/sass/tint-shade-functions/
+ * - https://material.io/design/color/the-color-system.html#color-theme-creation
+ * - https://medium.com/colin-buffum-portfolio/building-color-schemes-with-sass-948cf649b54b
+ * - https://ianstormtaylor.com/design-tip-never-use-black/
+ * - https://www.smashingmagazine.com/2016/04/web-developer-guide-color/
+ * - https://www.w3.org/TR/css-color-4/
+ *
+ * Tools:
+ * - https://clrs.cc/
+ * - https://colorme.io/
+ * - https://contrast-ratio.com/
+ * - http://paletton.com/
+ */
+
+/* Base colors */
+$black: #242628; /* 1 */
+$white: white;
+$gray:  mix($black, $white, 50%);
+
+/* Primary color */
+$primaryColor: #008181; /* 2 */
+
+/* Monochromatic colors [3] */
+$darkVariantColor:  mix($primaryColor, $black, 25%);
+$lightVariantColor: mix($primaryColor, $white, 25%);
+
+/* Complementary colors */
+$secondaryColor: complement($primaryColor);
+
+/* Triad colors */
+$supportColor: adjust-hue($primaryColor, 120deg);
+$accentColor:  adjust-hue($primaryColor, 240deg);
+
+/* Feedback colors [4] */
+$successColor: mix(#2ecc40, $primaryColor, 10%);
+$warningColor: mix(#ffdc00, $primaryColor, 10%);
+$errorColor:   mix(#ff4136, $primaryColor, 10%);
+$infoColor:    mix(#0074d9, $primaryColor, 10%);
+
+/* Third party */
+$brandColor: (
+  facebook: #3b5998,
+  linkedIn: #0077b5,
+  rss: #ee802f,
+  twitter: #38a1f3
+);

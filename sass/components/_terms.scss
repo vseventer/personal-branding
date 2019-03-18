@@ -1,0 +1,5 @@
+/* .c-terms { } */
+
+.c-terms__list {
+  @include list-horizontal();
+}

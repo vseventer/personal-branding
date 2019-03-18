@@ -1,0 +1,29 @@
+/**
+ * 1. Center the content.
+ */
+.s-container {
+  max-width: $lineLength;
+
+  /* stylelint-disable-next-line property-blacklist */
+  margin-right: auto; /* 1 */
+  margin-left: auto;
+}
+
+/**
+ * Modifier for breaking the container and occupying full width.
+ */
+.s-container--breakout {
+  max-width: 100%;
+}
+
+/**
+ * Modifier allowing additional padding so the content will not glue to the
+ * edges on smaller devices.
+ *
+ * Further reading:
+ * - https://css-tricks.com/best-way-implement-wrapper-css/
+ */
+.s-container--padded {
+  padding-right: vr(0.5);
+  padding-left: vr(0.5);
+}

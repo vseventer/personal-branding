@@ -1,0 +1,25 @@
+/**
+ * 1. Scale relatively based on one character width of current font-size.
+ */
+@mixin list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  li + li { /* stylelint-disable-line selector-max-type */
+    margin-left: vr($charLength); /* 1 */
+  }
+
+  @at-root {
+    /**
+     * Alignment modifiers.
+     */
+    &--center {
+      justify-content: center;
+    }
+
+    &--end {
+      justify-content: flex-end;
+    }
+  }
+}
