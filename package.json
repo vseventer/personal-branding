@@ -19,7 +19,6 @@
   },
   "main": "sass/style.scss",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.2",
     "sass-math-pow": "^0.1.5",
     "systematize": "^3.2.4"
   },

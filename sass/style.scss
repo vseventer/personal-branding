@@ -1,14 +1,10 @@
 /* Variables */
-@import "variables/core";
 @import "variables/colors";
 @import "variables/typography";
 
 /* Libraries */
 @import "sass-math-pow/sass/index";
 @import "systematize/systematize";
-@import "@fortawesome/fontawesome-free/scss/regular";
-@import "@fortawesome/fontawesome-free/scss/brands";
-@import "@fortawesome/fontawesome-free/scss/fontawesome";
 
 /* Functions */
 @import "functions/vertical-rhythm";
