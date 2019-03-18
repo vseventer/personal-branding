@@ -20,12 +20,12 @@
  */
 
 /* Base colors */
-$black: #242628; /* 1 */
-$white: white;
+$black: #242628 !default; /* 1 */
+$white: white !default;
 $gray:  mix($black, $white, 50%);
 
 /* Primary color */
-$primaryColor: #008181; /* 2 */
+$primaryColor: #008181 !default; /* 2 */
 
 /* Monochromatic colors [3] */
 $darkVariantColor:  mix($primaryColor, $black, 25%);

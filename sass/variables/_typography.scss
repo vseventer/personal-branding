@@ -18,11 +18,11 @@
  * Tools:
  * - https://www.modularscale.com/
  */
-$fontSize:   1em; /* 1 */
-$ratio:      1.25; /* 2 */
-$baseline:   1.5; /* 3 */
+$fontSize:   1em !default; /* 1 */
+$ratio:      1.25 !default; /* 2 */
+$baseline:   1.5 !default; /* 3 */
 $charLength: 0.5em; /* 4 */
-$lineLength: $charLength * 75; /* 4 */
+$lineLength: $charLength * 75 !default; /* 4 */
 
 /**
  * 1. Use system font stack.
