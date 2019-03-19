@@ -1,12 +1,33 @@
 {
-  "name"        : "personal-branding",
-  "version"     : "0.1.0-dev",
-  "description" : "A set of Sass files for personal branding.",
-  "keywords"    : [ "branding" ],
-  "homepage"    : "https://github.com/vseventer/personal-branding",
-  "bugs"        : "https://github.com/vseventer/personal-branding/issues",
-  "author"      : "Mark van Seventer <mark@vseventer.com>",
-  "repository"  : { "type": "git", "url": "vseventer/personal-branding" },
-  "scripts"     : { },
-  "private"     : true
+  "name": "personal-branding",
+  "version": "0.1.0-dev",
+  "description": "A set of commonly used Sass files for personal branding.",
+  "keywords": [
+    "branding"
+  ],
+  "homepage": "https://github.com/vseventer/personal-branding",
+  "bugs": "https://github.com/vseventer/personal-branding/issues",
+  "author": "Mark van Seventer <mark@vseventer.com>",
+  "repository": {
+    "type": "git",
+    "url": "vseventer/personal-branding"
+  },
+  "scripts": {
+    "lint": "stylelint sass/",
+    "pretest": "npm run lint",
+    "preversion": "npm test"
+  },
+  "main": "sass/style.scss",
+  "dependencies": {
+    "sass-math-pow": "^0.1.5",
+    "systematize": "^3.2.4"
+  },
+  "devDependencies": {
+    "stylelint": "^9.6.0",
+    "stylelint-config-rational-order": "^0.0.4",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.2",
+    "stylelint-scss": "^3.3.2"
+  },
+  "private": true
 }

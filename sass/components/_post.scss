@@ -1,0 +1,36 @@
+/* .c-post { } */
+
+.c-post__link {
+  @include link-immutable();
+}
+
+.c-post__subtitle {
+  @extend %u-spacer--small;
+
+  color: $gray;
+}
+
+.c-post__comments {
+  text-align: center;
+}
+
+/**
+ * Color modifiers.
+ */
+.c-post--cover {
+  color: $white;
+
+  background-color: $darkVariantColor;
+}
+
+/**
+ * Header modifiers.
+ *
+ * 1. Scale relatively based on font-size.
+ */
+.c-post__header--large {
+  padding-top: vr(2em); /* 1 */
+  padding-bottom: vr(2em); /* 1 */
+
+  text-align: center;
+}

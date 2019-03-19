@@ -1,0 +1,20 @@
+.c-related {
+  display: grid;
+  grid-column-gap: vr(1);
+  grid-template-columns: 1fr [prev] 1fr;
+}
+
+.c-related__label {
+  font-style: italic;
+}
+
+.c-related__next,
+.c-related__prev {
+  @extend %u-card;
+
+  padding: vr(0.5);
+}
+
+.c-related__prev {
+  grid-column: prev;
+}

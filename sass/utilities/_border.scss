@@ -1,0 +1,13 @@
+.u-border-top,
+%u-border-top {
+  padding-top: vr(1);
+
+  border-top: 1px solid $gray;
+}
+
+.u-border-bottom,
+%u-border-bottom {
+  padding-bottom: vr(1);
+
+  border-bottom: 1px solid $gray;
+}

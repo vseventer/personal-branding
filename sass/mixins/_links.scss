@@ -1,0 +1,5 @@
+@mixin link-immutable {
+  &:any-link {
+    color: inherit;
+  }
+}

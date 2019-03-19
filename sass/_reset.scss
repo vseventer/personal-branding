@@ -1,0 +1,77 @@
+/**
+ * 1. Ensure the page always fills at least the entire height of the viewport
+ *    (useful when capturing mouse events - see
+ *    https://www.kirupa.com/html5/make_body_take_up_full_browser_height.htm)
+ * 2. Force scrollbars to always be visible to prevent awkward `jumps` when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Rely on systematize to set sans-serif system font stack in all browsers.
+ */
+html {
+  min-height: 100%; /* 1 */
+  overflow-y: scroll; /* 2 */
+
+  color: $black;
+  /* stylelint-disable-next-line comment-empty-line-before */
+  /* font-family: $sansSerif; */ /* 3 */
+  font-size: $fontSize;
+  line-height: $baseline;
+}
+
+/* stylelint-disable selector-list-comma-newline-after */
+/**
+ * Reset margin and padding from all block-level elements in all browsers.
+ *
+ * [1] Enumerate HTML5 block-level elements.
+ * [2] Enumarete list-related block-level elements.
+ *
+ * Further reading:
+ * - https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
+ */
+article, aside, details, dialog, figcaption, figure, footer, header, /* 1 */
+hgroup, main, nav, section, /* 1 */
+address,
+blockquote,
+div,
+dl, dd, ol, ul, /* 2 */
+form,
+h1, h2, h3, h4, h5, h6,
+p,
+pre, table, th, td, fieldset, hr {
+  margin: 0; /* stylelint-disable-line property-blacklist */
+  padding: 0;
+}
+/* stylelint-enable selector-list-comma-newline-after */
+
+/**
+ * 1. Reduce font-size by one as monospace tends to be a bit larger visually.
+ * 2. Wrap overflowing text instead of breaking its parents container.
+ * 3. Insert a line break at any point.
+ *
+ * Further reading:
+ * - https://css-tricks.com/almanac/properties/w/whitespace/
+ * - https://css-tricks.com/almanac/properties/w/word-break/
+ * - https://gohugo.io/content-management/syntax-highlighting/
+ */
+pre {
+  @include ms(-1); /* 1 */
+
+  white-space: pre-wrap; /* 2 */
+  word-break: break-all; /* 3 */
+}
+
+/**
+ * Define consistent width for tables in all browsers.
+ */
+table {
+  width: 100%;
+}
+
+/**
+ * Normalize smaller font-size in all browsers.
+ */
+small,
+sub,
+sup {
+  @include ms-inline(-1);
+}

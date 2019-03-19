@@ -1,0 +1,12 @@
+.c-menu {
+  padding-top: vr(1);
+  padding-bottom: vr(1);
+}
+
+.c-menu__list {
+  @include list-horizontal();
+}
+
+.c-menu__link {
+  @include link-immutable();
+}

@@ -1,0 +1,17 @@
+/**
+ * Set default link styles.
+ */
+a {
+  &:link {
+    color: $primaryColor;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $lightVariantColor;
+  }
+}

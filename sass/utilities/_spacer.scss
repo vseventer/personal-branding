@@ -1,0 +1,30 @@
+/**
+ * Space apart by one vertical-rhythm.
+ */
+.u-spacer,
+%u-spacer {
+  margin-top: vr(1);
+}
+
+/**
+ * Size modifiers.
+ */
+.u-spacer--mini,
+%u-spacer--mini {
+  margin-top: vr(0.25);
+}
+
+.u-spacer--small,
+%u-spacer--small {
+  margin-top: vr(0.5);
+}
+
+.u-spacer--large,
+%u-spacer--large {
+  margin-top: vr(2);
+}
+
+.u-spacer--xlarge,
+%u-spacer--xlarge {
+  margin-top: vr(4);
+}
