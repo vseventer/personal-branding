@@ -1,6 +1,6 @@
 {
   "name": "personal-branding",
-  "version": "0.1.0-dev",
+  "version": "0.1.0",
   "description": "A set of commonly used Sass files for personal branding.",
   "keywords": [
     "branding"
