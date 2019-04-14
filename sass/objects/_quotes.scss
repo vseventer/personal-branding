@@ -1,0 +1,32 @@
+/**
+ * 1. Limit line-height to force vertical positioning.
+ * 2. Required in order for after pseudo-selector to work.
+ */
+blockquote,
+q {
+  position: relative;
+  padding: vr(0.5);
+
+  font-style: italic;
+  border-left: vr(0.5) solid $gray;
+
+  &::before,
+  &::after {
+    @include ms-inline(7);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-family: serif;
+    line-height: 1; /* [1] */
+  }
+
+  &::before {
+    content: no-open-quote; /* [2] */
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}

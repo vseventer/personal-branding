@@ -68,6 +68,14 @@ table {
 }
 
 /**
+ * Format horizontal line as 1px line.
+ */
+hr {
+  border: none;
+  border-top: 1px solid $gray;
+}
+
+/**
  * Normalize smaller font-size in all browsers.
  */
 small,
