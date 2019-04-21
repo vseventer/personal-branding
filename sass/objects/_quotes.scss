@@ -5,9 +5,11 @@
 blockquote,
 q {
   position: relative;
+
   padding: vr(0.5);
 
   font-style: italic;
+
   border-left: vr(0.5) solid $gray;
 
   &::before,

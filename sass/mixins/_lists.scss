@@ -4,6 +4,7 @@
 @mixin list-horizontal {
   display: flex;
   flex-wrap: wrap;
+
   list-style-type: none;
 
   li + li { /* stylelint-disable-line selector-max-type */
