@@ -3,9 +3,12 @@
  *
  * 1. Only apply styling to immediate children.
  * 2. Increase spacing after code block due to dropped box shadow.
+ * 3. Negatively indent quotes to show border on outside.
+ * 4. Indent lists to display list markers for smaller screen sizes.
  */
 .s-content { /* 1 */
-  /* stylelint-disable selector-max-compound-selectors */
+  /* stylelint-disable selector-max-combinators, selector-max-compound-selectors */
+  /* stylelint-disable selector-max-universal */
   * + * {
     @extend %u-spacer--small;
   }
@@ -22,9 +25,27 @@
   .highlight + * { /* 2 */
     @extend %u-spacer;
   }
+  /* stylelint-enable selector-max-universal */
 
   li + li {
     @extend %u-spacer--mini;
   }
-  /* stylelint-enable selector-max-compound-selectors */
+
+  /* stylelint-disable max-nesting-depth */
+  @include breakpoint($lineLength) {
+    blockquote,
+    q {
+      margin-left: vr(-1); /* 3 */
+    }
+  }
+
+  @include breakpoint(max-width $lineLength) {
+    ol,
+    ul {
+      margin-left: vr(1em); /* 4 */
+    }
+  }
+  /* stylelint-enable max-nesting-depth */
+
+  /* stylelint-enable selector-max-combinators, selector-max-compound-selectors */
 }

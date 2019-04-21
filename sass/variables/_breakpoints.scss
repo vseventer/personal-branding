@@ -1,0 +1,11 @@
+/**
+ * Further reading:
+ * - http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/
+ * - https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+ */
+$breakpoint: (
+  phone:     0,   /* Targeting all devices. */
+  tablet:  600px, /* Targeting tablet portrait and up. */
+  desktop: 900px, /* Targeting desktop / tablet landscape and up. */
+  wide:   1200px  /* Targeting large desktop and up. */
+) !default;
