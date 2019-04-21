@@ -71,7 +71,9 @@
     "selector-max-id": 0,
     "selector-max-pseudo-class": 1,
     "selector-max-specificity": [ "0,1,0", { "severity": "warning" } ],
-    "selector-max-type": 1,
+    "selector-max-type": [ 1, {
+      "ignore": [ "next-sibling" ]
+    }],
     "selector-max-universal": 0,
     "selector-nested-pattern": null,
     "selector-no-qualifying-type": true,
@@ -229,6 +231,10 @@
 
     "plugin/no-unsupported-browser-features": [ true, {
       "severity": "warning"
+    }],
+
+    "plugin/rational-order": [ true, {
+      "empty-line-between-groups": true
     }],
 
     "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
